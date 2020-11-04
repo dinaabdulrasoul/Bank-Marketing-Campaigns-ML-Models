@@ -5,6 +5,17 @@ This project is part of the Udacity Azure ML Nanodegree.
 In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
+WorkspaceException: WorkspaceException:
+	Message: No workspaces found with name=udacity-project in all the subscriptions that you have access to.
+	InnerException None
+	ErrorResponse 
+{
+    "error": {
+        "message": "No workspaces found with name=udacity-project in all the subscriptions that you have access to."
+    }
+}
+
+
 ## Summary
 **In 1-2 sentences, explain the problem statement: e.g "This dataset contains data about... we seek to predict..."**
 
