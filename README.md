@@ -5,15 +5,6 @@ This project is part of the Udacity Azure ML Nanodegree.
 In this project, we build and optimize an Azure ML pipeline using the Python SDK and a provided Scikit-learn model.
 This model is then compared to an Azure AutoML run.
 
-WorkspaceException: WorkspaceException:
-	Message: No workspaces found with name=udacity-project in all the subscriptions that you have access to.
-	InnerException None
-	ErrorResponse 
-{
-    "error": {
-        "message": "No workspaces found with name=udacity-project in all the subscriptions that you have access to."
-    }
-}
 
 
 ## Summary
@@ -23,8 +14,13 @@ WorkspaceException: WorkspaceException:
 
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
+We first start by importing the data in the form of a csv file from a URL using the TabularDatasetFactory then we clean the data after that, 
+the cleaned data is randomly split into train data (80% of the original dataset) & the test data (20% of the original dataset).
+
+The classification algorithm used in this pipeline is the binary classification algorithm.
 
 **What are the benefits of the parameter sampler you chose?**
+Random sampling is a great sampler to avoid bias. 
 
 **What are the benefits of the early stopping policy you chose?**
 
