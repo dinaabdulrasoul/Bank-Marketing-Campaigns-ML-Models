@@ -16,6 +16,7 @@ from azureml.data.dataset_factory import TabularDatasetFactory
 
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
+
 ### YOUR CODE HERE ###
 import azureml.core import Dataset
 path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
@@ -23,15 +24,27 @@ ds=Dataset.Tabular.from_delimited_files(path=[(datastore, path)]
 
 
 
-x, y = clean_data(ds)
+x, y = clean_data(ds)    #
 
 # TODO: Split data into train and test sets.
 
 ### YOUR CODE HERE ###
-data_size=x.shape[0]
-random.shuffle(ds)
-train_data=ds[:data_size*0.7]
-test_data=ds[data_size*0.7:]
+from sklearn.model_selection import train_test_split                                       
+m=ds.shape[0] #number of training examples
+test_ratio=0.2
+np.randomseed(42)
+shuffled_indices=np.random.permutation(len(ds))
+test_data_size=int(len(ds)*test_ratio)
+test_indices=shuffled_indices[:test_data_size]
+train_indices=shuffled_indices[test_data_size:]
+train_set=ds.iloc[train_indices] #iloc does index selection
+test_set=ds.iloc[test_indices]
+x_train=x.iloc[train_indices]
+y_train=y.iloc[train_indices]
+x_test=x.iloc[train_indices]
+y_test=y.iloc[train_indices]              
+                                        
+
 
 run = Run.get_context()
 
