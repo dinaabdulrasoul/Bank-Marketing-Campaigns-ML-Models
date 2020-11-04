@@ -11,16 +11,27 @@ from azureml.core.run import Run
 from azureml.data.dataset_factory import TabularDatasetFactory
 
 # TODO: Create TabularDataset using TabularDatasetFactory
+
+
+
 # Data is located at:
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
+### YOUR CODE HERE ###
+import azureml.core import Dataset
+path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
+ds=Dataset.Tabular.from_delimited_files(path=[(datastore, path)]
 
-ds = ### YOUR CODE HERE ###
+
 
 x, y = clean_data(ds)
 
 # TODO: Split data into train and test sets.
 
-### YOUR CODE HERE ###a
+### YOUR CODE HERE ###
+data_size=x.shape[0]
+random.shuffle(ds)
+train_data=ds[:data_size*0.7]
+test_data=ds[data_size*0.7:]
 
 run = Run.get_context()
 
