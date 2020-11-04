@@ -29,21 +29,9 @@ x, y = clean_data(ds)    #
 # TODO: Split data into train and test sets.
 
 ### YOUR CODE HERE ###
-from sklearn.model_selection import train_test_split                                       
-m=ds.shape[0] #number of training examples
-test_ratio=0.2
-np.randomseed(42)
-shuffled_indices=np.random.permutation(len(ds))
-test_data_size=int(len(ds)*test_ratio)
-test_indices=shuffled_indices[:test_data_size]
-train_indices=shuffled_indices[test_data_size:]
-train_set=ds.iloc[train_indices] #iloc does index selection
-test_set=ds.iloc[test_indices]
-x_train=x.iloc[train_indices]
-y_train=y.iloc[train_indices]
-x_test=x.iloc[train_indices]
-y_test=y.iloc[train_indices]              
-                                        
+from sklearn.model_selection import train_test_split  
+x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)                                        
+       
 
 
 run = Run.get_context()
