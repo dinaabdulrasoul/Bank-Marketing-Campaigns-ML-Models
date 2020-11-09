@@ -20,7 +20,7 @@ In the second approach, automl was used to find the best performing model, which
 We first start by importing the data in the form of a csv file from a URL using the TabularDatasetFactory then we clean the data after that, 
 the cleaned data is randomly split into train data (80% of the original dataset) & the test data (20% of the original dataset).
 The classification algorithm used in this pipeline is the logistic regression algorithm.
-Then we used hyperdrive to tune the inverse regularization paramter(regularization strength) & the maximum number of iterations in order to maximize the value of the accuracy. The best values were found to be: 'Regularization Strength:': 0.6174300437633223, 'Max iterations:': 100, 'Accuracy': 0.9072837632776934.
+Then we used hyperdrive to tune the inverse regularization paramter(regularization strength) & the maximum number of iterations in order to maximize the value of the accuracy. The best value of the accuracy was found to be: 'Accuracy': 0.9072837632776934.
 **What are the benefits of the parameter sampler you chose?**
 Random sampling is a great sampler to avoid bias. It also supports early termination of low-performance runs.
 
