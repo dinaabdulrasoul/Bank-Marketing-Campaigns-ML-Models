@@ -1,5 +1,5 @@
 # Optimizing an ML Pipeline in Azure
-
+## Table of Contents
 * ### Overview
 * ### Summary
   * Problem Statement
