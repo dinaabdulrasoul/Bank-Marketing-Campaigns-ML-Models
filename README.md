@@ -3,14 +3,14 @@
 # Table of Contents
 ### 1. Overview
 ### 2. Summary 
- #### 2.1 Problem Statement
- #### 2.2 Solution
+ ####   2.1 Problem Statement
+ ####   2.2 Solution
 ### 3. Pipelines
- #### 3.1 Scikit-learn Pipeline with Hyperdrive
-  ##### 3.1.1 Pipeline Architecture
-  ##### 3.1.2 Parameter Sampler 
-  ##### 3.1.3 Early Stopping Policy 
- #### 3.2 AutoML Pipeline
+ ####   3.1 Scikit-learn Pipeline with Hyperdrive
+  #####   3.1.1 Pipeline Architecture
+  #####   3.1.2 Parameter Sampler 
+  #####   3.1.3 Early Stopping Policy 
+ ####   3.2 AutoML Pipeline
 ### 4. Pipelines Comparison 
 ### 5. Future Work
 
@@ -53,3 +53,4 @@ The best run details based on the choosen automl configuration can be viewed in 
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**
 Some of the imporvements might be using a different sampling paramater, for example: BayesianSampling or GridSampling, they might take up more time and resources however that might improve the accuracy.
 Also I can try not using a termination policy, for example with BayesianSampling method as the data we have is not that large so an early termination policy is not really necessary. 
+.....
