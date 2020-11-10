@@ -3,14 +3,14 @@
 # Table of Contents
 ### 1. Overview
 ### 2. Summary 
- ####   2.1 Problem Statement
- ####   2.2 Solution
+ ####   - Problem Statement
+ ####   - Solution
 ### 3. Pipelines
- ####   3.1 Scikit-learn Pipeline with Hyperdrive
-  #####   3.1.1 Pipeline Architecture
-  #####   3.1.2 Parameter Sampler 
-  #####   3.1.3 Early Stopping Policy 
- ####   3.2 AutoML Pipeline
+ ####   - Scikit-learn Pipeline with Hyperdrive
+  #####   - Pipeline Architecture
+  #####   - Parameter Sampler 
+  #####   - Early Stopping Policy 
+ ####   - 3.2 AutoML Pipeline
 ### 4. Pipelines Comparison 
 ### 5. Future Work
 
