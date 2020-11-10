@@ -1,18 +1,18 @@
 # Optimizing an ML Pipeline in Azure
 
 # Table of Contents
-### 1. Overview
-### 2. Summary 
- ####   - Problem Statement
- ####   - Solution
-### 3. Pipelines
- ####   - Scikit-learn Pipeline with Hyperdrive
-  #####   - Pipeline Architecture
-  #####   - Parameter Sampler 
-  #####   - Early Stopping Policy 
- ####   - 3.2 AutoML Pipeline
-### 4. Pipelines Comparison 
-### 5. Future Work
+1. Overview
+2. Summary 
+ - Problem Statement
+ - Solution
+3. Pipelines
+ - Scikit-learn Pipeline with Hyperdrive
+  - Pipeline Architecture
+  - Parameter Sampler 
+  - Early Stopping Policy 
+- 3.2 AutoML Pipeline
+4. Pipelines Comparison 
+5. Future Work
 
 
 ## Overview
