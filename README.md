@@ -14,7 +14,8 @@ The dataset contained 32950 training examples in a csv file.
 
 **In 1-2 sentences, explain the solution: e.g. "The best performing model was a ..."**
 We had two approaches to the problem, the first by using Hyperdrive to obtain the best hyperparamter, the model we used was a logistic regression model imported from sci-kit learn. 
-In the second approach, automl was used to find the best performing model, which was...
+In the second approach, automl was used to find the best performing model, which was Voting Ensemble with accuracy of 0.91688
+
 ## Scikit-learn Pipeline
 **Explain the pipeline architecture, including data, hyperparameter tuning, and classification algorithm.**
 We first start by importing the data in the form of a csv file from a URL using the TabularDatasetFactory then we clean the data after that, 
