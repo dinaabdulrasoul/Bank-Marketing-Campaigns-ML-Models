@@ -3,8 +3,8 @@
 # Table of Contents
 ### 1. Overview
 ### 2. Summary 
- ####   2.1 Problem Statement
- ####   2.2 Solution
+		####   2.1 Problem Statement
+		####   2.2 Solution
 ### 3. Pipelines
  ####   3.1 Scikit-learn Pipeline with Hyperdrive
   #####   3.1.1 Pipeline Architecture
