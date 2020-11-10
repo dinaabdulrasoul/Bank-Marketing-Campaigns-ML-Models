@@ -29,13 +29,13 @@ The second approach, was to use Azure's automl to find the best performing model
 
 ## Scikit-learn Pipeline
 * We first need to prepare our train.py script by:  
- * Importing the csv file containing the marketing campaigns data into our dataset using the TabularDataSetFactory module.  
- * Cleaning the dataset, which included droping NaN values.  
- * Splitting our dataset into training set (80% of the data) & test set (20% of the data.)   
- * Creating a Logistic Regression model using sci-kit learn.  
- * Creating a directory(outputs) to save the generated model into it.  
+  * Importing the csv file containing the marketing campaigns data into our dataset using the TabularDataSetFactory module.  
+  * Cleaning the dataset, which included droping NaN values.  
+  * Splitting our dataset into training set (80% of the data) & test set (20% of the data.)   
+  * Creating a Logistic Regression model using sci-kit learn.  
+  * Creating a directory(outputs) to save the generated model into it.  
 * After the train.py script is ready, we choose a proper parameter sampling method for the inverse regularization paramter(C) & the maximum number of iterations(max_iter), early termination policy and an estimator to create the HyperDriveConfig.  
- * The HyperDriveConfig was configured using the following:  
+  * The HyperDriveConfig was configured using the following:  
                              the estimator we created for the train.py,  
                              Paramater sampling method chosen,  
                              The early termination policy chosen,  
@@ -46,8 +46,10 @@ The second approach, was to use Azure's automl to find the best performing model
 * Then we submit the hyperdrive run.  
 * Once the run is complete, we choose the best run (the run that achieved the maximum accuracy) and save the model generated.  
  The best value of the Accuracy was found to be: **0.9072837632776934**  
+ 
 The following diagram summarizes the workflow:  
 ![Scikit-learn Pipeline](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/hyperdrive_pipeline.PNG)  
+
 **Algorithm**   
 Logistic Regression is a supervisied binary classification algorithm that predicts the probability of a target varaible, returning either 1 or 0 (yes or no).  
 
@@ -87,10 +89,10 @@ The following diagram summarizes the Pipeline workflow:
 ![AutoML Pipeline](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/Automl_pipeline.PNG)  
 
 Some of the learning algorithms that had been tested by the AutoML:
-![Runs](optimizing-an-ml-pipeline/Screenshots/doc1.PNG)  
-![Runs](optimizing-an-ml-pipeline/Screenshots/doc2.PNG)  
-![Runs](optimizing-an-ml-pipeline/Screenshots/doc3.PNG)  
-![Runs](optimizing-an-ml-pipeline/Screenshots/doc4.PNG)  
+![Runs](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/Screenshots/doc1.PNG)  
+![Runs](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/Screenshots/doc2.PNG)  
+![Runs](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/Screenshots/doc3.PNG)  
+![Runs](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/Screenshots/doc4.PNG)  
 
 
 ## Pipeline comparison  
