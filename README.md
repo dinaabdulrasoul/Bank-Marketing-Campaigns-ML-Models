@@ -13,6 +13,7 @@
   * #### AutoML Pipeline
 * ### Pipelines Comparison
 * ### Future Work
+* ### References
 
 ## Overview
 This project is a part of the Udacity Azure ML Nanodegree.  
@@ -105,3 +106,5 @@ Pipeline-wise, AutoML didn't require a train.py script
 * Some of the imporvements might be using a different sampling paramater, for example: BayesianSampling or GridSampling, they might take up more time and resources however that might improve the accuracy.  
 * Also we can try using a different termination policy or not using a termination policy at all, for example with BayesianSampling method as the data we have is not that large so an early termination policy is not really necessary.   
 
+## References
+* Understanding Voting Ensemble: [Voting Ensemble](https://machinelearningmastery.com/voting-ensembles-with-python/#:~:text=Voting%20is%20an%20ensemble%20machine,of%20multiple%20other%20regression%20models.&text=A%20voting%20ensemble%20involves%20summing,predictions%20made%20by%20regression%20models.)
