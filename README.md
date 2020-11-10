@@ -40,4 +40,3 @@ Also I can try not using a termination policy, for example with BayesianSampling
 ## Proof of cluster clean up
 **If you did not delete your compute cluster in the code, please complete this section. Otherwise, delete this section.**
 **Image of cluster marked for deletion**
-!pip install -r /anaconda/envs/azureml_py36/lib/python3.6/site-packages/azureml/automl/core/validated_linux_requirements.txt
