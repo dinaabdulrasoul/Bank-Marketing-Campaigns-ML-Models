@@ -74,16 +74,16 @@ Voting Ensemble is an ensemble machine learning model that combines the predicti
  * Importing "clean" function from train.py to clean the dataset, including droping NaN values.  
  * Splitting our dataset into training set (80% of the data) & test set (20% of the data.)
  * Preparing the AutoML Config by passing in the following:
-    experiment_timeout_minutes=30,
-    task="classification",
-    primary_metric="accuracy",
-    training_data=train_data,
-    label_column_name="y",
-    n_cross_validations=2,
-    max_concurrent_iterations=4,
-    featurization='auto'
-  * Submitting the AutoML config
-  * Finding the best run then saving the model.
+    experiment_timeout_minutes=30  
+    task="classification"  
+    primary_metric="accuracy"  
+    training_data=train_data  
+    label_column_name="y"  
+    n_cross_validations=2  
+    max_concurrent_iterations=4  
+    featurization='auto'  
+  * Submitting the AutoML config.   
+  * Finding the best run then saving the model.  
 
 The following diagram summarizes the Pipeline workflow:  
 ![AutoML Pipeline](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/Automl_pipeline.PNG)  
@@ -96,7 +96,7 @@ Some of the learning algorithms that had been tested by the AutoML:
 
 
 ## Pipeline comparison  
-The scikit-learn logisitc regression model, with the use of hyperdrive for hyperparameters tuning, achieved an accuracy of 0.9072837632776934, while the automl voting ensemble model ahieved an accuracy of 0.91779.  
+The scikit-learn logisitc regression model, with the use of hyperdrive for hyperparameters tuning, achieved an accuracy of **0.9072837632776934**, while the automl voting ensemble model ahieved an accuracy of **0.91779**.  
 Hyperdrive aims to optimize the paramaters of a specific learning algorithm while AutoML tries many different algorithms until it finds the model that obtains the highest value of Accuracy, this explains why AutoML achieved a higher accuracy; it tried diffferent algorithms not just one like hyperdrive. 
 Pipeline-wise, AutoML didn't require a train.py script 
 
