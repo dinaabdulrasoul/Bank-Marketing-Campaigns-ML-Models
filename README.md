@@ -25,11 +25,11 @@ The dataset contains data about marketing campaigns for a bank, the campaigns ar
 The dataset contains 32950 training examples in a csv file.  
 ### **Solution**
 We had two approaches to solving the problem, the first approach was by using Hyperdrive to obtain the best values of the hyperparamters for a scikit-learn logistic regression model, in order to maximize the accuracy of the model.  
-The second approach, was to use Azure's automl to find the best performing model based on the highest accuracy value.  
+The second approach, was to use Azure's AutoML to find the best performing model based on the highest accuracy value.  
 
 ## Scikit-learn Pipeline
 * We first need to prepare our train.py script by:  
-  * Importing the csv file containing the marketing campaigns data into our dataset using the TabularDataSetFactory module.  
+  * Importing the csv file containing the marketing campaigns data into our dataset using the TabularDatasetFactory module.  
   * Cleaning the dataset, which included droping NaN values.  
   * Splitting our dataset into training set (80% of the data) & test set (20% of the data.)   
   * Creating a Logistic Regression model using sci-kit learn.  
@@ -60,20 +60,20 @@ Random Sampling is a great sampler to avoid bias, and it also supports early ter
 **Early Stopping Policy**  
 For this pipeline, Bandit Policy has been used, which is an early termination policy based on slack criteria, and the evaluation interval.    
 * Slack_factor is the ratio used to calculate the allowed distance from the best performing experiment run.  
-* Evaluation_interval is the frequency for applying the policy.  
+* Evaluation_interval is the frequency for applying the policy.    
 *The benefits of this stopping policy* is that any run that doesn't fall within the slack factor or slack amount of the evaluation metric with respect to the best performing run will be terminated so this helps us quickly eliminate the bad performing runs.  
 
 ## AutoML  
 **Best Performing Model**  
-The best performing model found by the AutoML was the Voting Ensemble with an accuracy of 0.91779.  
+The best performing model found by the AutoML was the **Voting Ensemble** with an accuracy of **0.91779**.  
 Voting Ensemble is an ensemble machine learning model that combines the predictions from multiple other models. It is a technique that may be used to improve model performance, ideally achieving better performance than any single model used in the ensemble, that involves summing the predictions made by classification models.  
 ![Best Run](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/Screenshots/doc4%20-%20azureml%20studio.PNG)  
 
 **Pipeline** 
- * Importing the csv file containing the marketing campaigns data into our dataset using the TabularDataSetFactory module.  
+ * Importing the csv file containing the marketing campaigns data into our dataset using the TabularDatasetFactory module.  
  * Importing "clean" function from train.py to clean the dataset, including droping NaN values.  
  * Splitting our dataset into training set (80% of the data) & test set (20% of the data.)
- * Preparing the AutoML Config by passing in the following:
+ * Preparing the AutoML Config by passing in the following:  
     experiment_timeout_minutes=30  
     task="classification"  
     primary_metric="accuracy"  
