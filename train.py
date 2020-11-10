@@ -78,9 +78,13 @@ def main():
     run.log("Max iterations:", np.int(args.max_iter))
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
+    #for saving the model
+    os.makedirs('outputs',exist_ok=True)
+    joblib.dump(model,"outputs/hyperdrive_model.joblib")
 
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+   
 
 if __name__ == '__main__':
     main()
