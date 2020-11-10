@@ -67,7 +67,7 @@ For this pipeline, Bandit Policy has been used, which is an early termination po
 **Best Performing Model**  
 The best performing model found by the AutoML was the Voting Ensemble with an accuracy of 0.91779.  
 Voting Ensemble is an ensemble machine learning model that combines the predictions from multiple other models. It is a technique that may be used to improve model performance, ideally achieving better performance than any single model used in the ensemble, that involves summing the predictions made by classification models.  
-![Best Run](optimizing-an-ml-pipeline/Screenshots/doc4 - azureml studio.PNG)  
+![Best Run](https://github.com/dinaabdulrasoul/optimizing-an-ml-pipeline/blob/master/Screenshots/doc4 - azureml studio.PNG)  
 
 **Pipeline** 
  * Importing the csv file containing the marketing campaigns data into our dataset using the TabularDataSetFactory module.  
