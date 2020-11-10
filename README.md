@@ -1,19 +1,17 @@
 # Optimizing an ML Pipeline in Azure
 
-# Table of Contents
-1. Overview
-2. Summary 
- - Problem Statement
- - Solution
-3. Pipelines
- - Scikit-learn Pipeline with Hyperdrive
-  - Pipeline Architecture
-  - Parameter Sampler 
-  - Early Stopping Policy 
-- 3.2 AutoML Pipeline
-4. Pipelines Comparison 
-5. Future Work
-
+* ### Overview
+* ### Summary
+  * Problem Statement
+  * Solution
+* ### Pipelines
+  * #### Scikit-learn Pipeline with Hyperdrive
+     * Pipeline Architecture
+     * Parameter Sampler
+     * Early Stopping Policy
+  * #### AutoML Pipeline
+* ### Pipelines Comparison
+* ### Future Work
 
 ## Overview
 This project is part of the Udacity Azure ML Nanodegree.
