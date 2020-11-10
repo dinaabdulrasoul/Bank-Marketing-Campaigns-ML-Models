@@ -46,12 +46,10 @@ def clean_data(data):
 # "https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
 
 ### YOUR CODE HERE ###
-path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
-ds=TabularDatasetFactory.from_delimited_files(path="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv")
+src="https://automlsamplenotebookdata.blob.core.windows.net/automl-sample-notebook-data/bankmarketing_train.csv"
+ds=TabularDatasetFactory.from_delimited_files(path=src)
 
-
-
-x, y = clean_data(ds)    #
+x, y = clean_data(ds)    #cleaning the data
 
 # TODO: Split data into train and test sets.
 
@@ -59,11 +57,7 @@ x, y = clean_data(ds)    #
 from sklearn.model_selection import train_test_split  
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=0.2,random_state=42)                                        
        
-
-
 run = Run.get_context()
-
-
 
 def main():
     # Add arguments to script
@@ -78,12 +72,11 @@ def main():
     run.log("Max iterations:", np.int(args.max_iter))
 
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
-    #for saving the model
-    os.makedirs('outputs',exist_ok=True)
-    joblib.dump(model,"outputs/hyperdrive_model.joblib")
-
     accuracy = model.score(x_test, y_test)
     run.log("Accuracy", np.float(accuracy))
+    #for saving the hyperdrivemodel
+    os.makedirs('outputs',exist_ok=True)
+    joblib.dump(model,"outputs/hyperdrive_model.joblib")
    
 
 if __name__ == '__main__':
