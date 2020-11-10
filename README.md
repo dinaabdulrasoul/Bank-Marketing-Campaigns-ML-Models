@@ -102,6 +102,6 @@ Pipeline-wise, AutoML didn't require a train.py script
 
 
 ## Future work  
-Some of the imporvements might be using a different sampling paramater, for example: BayesianSampling or GridSampling, they might take up more time and resources however that might improve the accuracy.  
-Also we can try using a different termination policy or not using a termination policy at all, for example with BayesianSampling method as the data we have is not that large so an early termination policy is not really necessary.   
+* Some of the imporvements might be using a different sampling paramater, for example: BayesianSampling or GridSampling, they might take up more time and resources however that might improve the accuracy.  
+* Also we can try using a different termination policy or not using a termination policy at all, for example with BayesianSampling method as the data we have is not that large so an early termination policy is not really necessary.   
 
